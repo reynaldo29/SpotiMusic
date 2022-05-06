@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/ic_artist1" />
+
+
+        <TextView
+            android:id="@+id/song_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Nombre de la cancion"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/starbuttom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_star"
+            android:visibility="gone">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/author_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/song_text"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Nombre del autor"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/author_text"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="genero"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/author_text"
+            android:layout_toEndOf="@id/picture_image"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/playbuttom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_play"
+                app:backgroundTint="@color/cardview_dark_background">
+
+            </ImageButton>
+            <ImageButton
+
+                android:id="@+id/stopbuttom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:srcCompat="@drawable/ic_baseline_pause_24"/>
+            <ImageButton
+                android:id="@+id/compartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sentWatssap"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:srcCompat="@drawable/ic_baseline_share_24"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/aditional_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/author_text"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Promoción"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnGoTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/author_text"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Ver detalle"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
